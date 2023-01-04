@@ -11,7 +11,7 @@ class MethodChannelWalletConnect extends WalletConnectPlatform {
 
   @override
   Future<String?> getPlatformVersion() async {
-    final version = await methodChannel.invokeMethod<String>('getPlatformVersion');
+    final version = await WalletConnectPlatform.instance.getPlatformVersion();
     return version;
   }
 }

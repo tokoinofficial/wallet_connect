@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 
 import 'package:flutter/services.dart';
-import 'package:wallet_connect/wallet_connect.dart';
+import 'package:wallet_connect_android/wallet_connect_android.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +17,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   String _platformVersion = 'Unknown';
-  // final _walletConnectPlugin = WalletConnect();
+  final _walletConnectAndroidPlugin = WalletConnectAndroid();
 
   @override
   void initState() {
@@ -32,7 +32,7 @@ class _MyAppState extends State<MyApp> {
     // We also handle the message potentially returning null.
     try {
       platformVersion =
-          await WalletConnect().getPlatformVersion() ?? 'Unknown platform version';
+          await _walletConnectAndroidPlugin.getPlatformVersion() ?? 'Unknown platform version';
     } on PlatformException {
       platformVersion = 'Failed to get platform version.';
     }
