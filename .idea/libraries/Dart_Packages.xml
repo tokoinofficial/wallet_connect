@@ -193,6 +193,13 @@
             </list>
           </value>
         </entry>
+        <entry key="wallet_connect_android">
+          <value>
+            <list>
+              <option value="$USER_HOME$/development/flutter/.pub-cache/git/wallet_connect-44d6fc9dcd3beb4089b2c2353327ce34bc65d4ba/wallet_connect_android/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="wallet_connect_platform_interface">
           <value>
             <list>
@@ -227,6 +234,7 @@
       <root url="file://$USER_HOME$/Development/flutter/packages/flutter/lib" />
       <root url="file://$USER_HOME$/Development/flutter/packages/flutter_test/lib" />
       <root url="file://$USER_HOME$/development/flutter/.pub-cache/git/wallet_connect-35767c004c9153c5a2852aa39c387ac6fdc751aa/wallet_connect_platform_interface/lib" />
+      <root url="file://$USER_HOME$/development/flutter/.pub-cache/git/wallet_connect-44d6fc9dcd3beb4089b2c2353327ce34bc65d4ba/wallet_connect_android/lib" />
       <root url="file://$USER_HOME$/development/flutter/.pub-cache/hosted/pub.dartlang.org/async-2.9.0/lib" />
       <root url="file://$USER_HOME$/development/flutter/.pub-cache/hosted/pub.dartlang.org/boolean_selector-2.1.0/lib" />
       <root url="file://$USER_HOME$/development/flutter/.pub-cache/hosted/pub.dartlang.org/characters-1.2.1/lib" />
