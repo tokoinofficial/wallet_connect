@@ -1,5 +1,5 @@
-import 'package:wallet_connect_platform_interface/src/method_channel_wallet_connect.dart';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
+import 'package:wallet_connect_platform_interface/src/method_channel_wallet_connect.dart';
 
 /// The interface that implementations of wallet_connect must implement.
 ///
