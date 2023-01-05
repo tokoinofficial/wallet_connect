@@ -1,0 +1,33 @@
+name: wallet_connect
+description: Wallet Connect SDK
+version: 0.1.0+1
+publish_to: none
+
+environment:
+  sdk: ">=2.18.0 <3.0.0"
+  flutter: ">=3.3.2"
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        default_package: wallet_connect_android
+      ios:
+        default_package: wallet_connect_ios
+
+dependencies:
+  flutter:
+    sdk: flutter
+  wallet_connect_android:
+    path: ../wallet_connect_android
+  wallet_connect_ios:
+    path: ../wallet_connect_ios
+  wallet_connect_platform_interface:
+    path: ../wallet_connect_platform_interface
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  mocktail: ^0.3.0
+  plugin_platform_interface: ^2.0.0
+  very_good_analysis: ^3.1.0
