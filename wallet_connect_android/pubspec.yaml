@@ -1,20 +1,11 @@
 name: wallet_connect_android
-description: Android implementation of the wallet_connect plugin
-version: 0.1.0+1
+description: A new Flutter plugin project.
+version: 0.0.1
 publish_to: none
 
 environment:
-  sdk: ">=2.18.0 <3.0.0"
-  flutter: ">=3.3.2"
-
-flutter:
-  plugin:
-    implements: wallet_connect
-    platforms:
-      android:
-        package: io.tokoin.wallet.connect
-        pluginClass: WalletConnectPlugin
-        dartPluginClass: WalletConnectAndroid
+  sdk: '>=2.18.5 <3.0.0'
+  flutter: ">=2.5.0"
 
 dependencies:
   flutter:
@@ -25,5 +16,14 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_lints: ^2.0.0
   plugin_platform_interface: ^2.0.0
-  very_good_analysis: ^3.1.0
+
+flutter:
+  plugin:
+    implements: wallet_connect
+    platforms:
+      android:
+        package: io.tokoin.wallet.connect
+        pluginClass: WalletConnectAndroidPlugin
+        dartPluginClass: WalletConnectAndroid

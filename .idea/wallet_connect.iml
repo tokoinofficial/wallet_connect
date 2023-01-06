@@ -23,12 +23,6 @@
       <excludeFolder url="file://$MODULE_DIR$/wallet_connect/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/wallet_connect/build" />
       <excludeFolder url="file://$MODULE_DIR$/wallet_connect/.pub" />
-      <excludeFolder url="file://$MODULE_DIR$/wallet_connect_android/build" />
-      <excludeFolder url="file://$MODULE_DIR$/wallet_connect_android/.pub" />
-      <excludeFolder url="file://$MODULE_DIR$/wallet_connect_android/.dart_tool" />
-      <excludeFolder url="file://$MODULE_DIR$/wallet_connect_android/example/.pub" />
-      <excludeFolder url="file://$MODULE_DIR$/wallet_connect_android/example/.dart_tool" />
-      <excludeFolder url="file://$MODULE_DIR$/wallet_connect_android/example/build" />
       <excludeFolder url="file://$MODULE_DIR$/wallet_connect/example/wallet_connect/wallet_connect_ios/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/wallet_connect/example/wallet_connect/wallet_connect_ios/build" />
       <excludeFolder url="file://$MODULE_DIR$/wallet_connect/example/wallet_connect/wallet_connect_ios/.dart_tool" />
@@ -38,6 +32,18 @@
       <excludeFolder url="file://$MODULE_DIR$/wallet_connect_ios/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/wallet_connect_ios/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/wallet_connect_ios/build" />
+      <excludeFolder url="file://$MODULE_DIR$/wallet_connect_android_kotlin/build" />
+      <excludeFolder url="file://$MODULE_DIR$/wallet_connect_android_kotlin/example/build" />
+      <excludeFolder url="file://$MODULE_DIR$/wallet_connect_android_kotlin/example/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/wallet_connect_android_kotlin/example/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/wallet_connect_android_kotlin/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/wallet_connect_android_kotlin/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/wallet_connect_android/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/wallet_connect_android/build" />
+      <excludeFolder url="file://$MODULE_DIR$/wallet_connect_android/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/wallet_connect_android/example/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/wallet_connect_android/example/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/wallet_connect_android/example/build" />
     </content>
     <orderEntry type="jdk" jdkName="Android API 30 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />

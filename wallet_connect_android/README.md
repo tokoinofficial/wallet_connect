@@ -1,14 +1,15 @@
 # wallet_connect_android
 
-[![style: very good analysis][very_good_analysis_badge]][very_good_analysis_link]
+A new Flutter plugin project.
 
-The Android implementation of `wallet_connect`.
+## Getting Started
 
-## Usage
+This project is a starting point for a Flutter
+[plug-in package](https://flutter.dev/developing-packages/),
+a specialized package that includes platform-specific implementation code for
+Android and/or iOS.
 
-This package is [endorsed][endorsed_link], which means you can simply use `wallet_connect`
-normally. This package will be automatically included in your app when you do.
+For help getting started with Flutter development, view the
+[online documentation](https://flutter.dev/docs), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
 
-[endorsed_link]: https://flutter.dev/docs/development/packages-and-plugins/developing-packages#endorsed-federated-plugin
-[very_good_analysis_badge]: https://img.shields.io/badge/style-very_good_analysis-B22C89.svg
-[very_good_analysis_link]: https://pub.dev/packages/very_good_analysis
