@@ -68,9 +68,7 @@ class _HomePageState extends State<HomePage> {
             ElevatedButton(
               onPressed: () async {
                 try {
-                  await callBackgroundService((s) {
-                    callback('test wallet connect');
-                  });
+                  await callBackgroundService(callback);
                 } catch (error) {
                   ScaffoldMessenger.of(context).showSnackBar(
                     SnackBar(
