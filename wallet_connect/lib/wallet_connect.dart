@@ -1,4 +1,8 @@
+import 'dart:ui';
+
 import 'package:wallet_connect_platform_interface/wallet_connect_platform_interface.dart';
+
+import 'callback_dispatcher.dart';
 
 WalletConnectPlatform get _platform => WalletConnectPlatform.instance;
 
@@ -9,12 +13,21 @@ Future<String> getPlatformName() async {
   return platformName;
 }
 
-/// Initialize for background call
-Future<void> initializeForBackground() async {
-  await _platform.initializeForBackground();
-}
+class WalletConnect {
+  WalletConnect._();
 
-/// Call background service
-Future<void> callBackgroundService(void Function(String s) callback) async {
-  await _platform.callBackgroundService(callback);
+  /// Initialize for background call
+  static Future<void> initializeForBackground() async {
+    final callback = PluginUtilities.getCallbackHandle(callbackDispatcher);
+    await _platform.initializeForBackground([callback?.toRawHandle()]);
+  }
+
+  /// Call background service
+  static Future<void> callBackgroundService(
+      void Function(String s) callback) async {
+    final args = <dynamic>[
+      PluginUtilities.getCallbackHandle(callback)?.toRawHandle()
+    ];
+    await _platform.callBackgroundService(args);
+  }
 }

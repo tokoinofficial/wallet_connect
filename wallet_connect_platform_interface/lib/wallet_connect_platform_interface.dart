@@ -32,8 +32,8 @@ abstract class WalletConnectPlatform extends PlatformInterface {
   Future<String?> getPlatformName();
 
   /// Initialize call for background
-  Future<bool?> initializeForBackground();
+  Future<bool?> initializeForBackground(dynamic args);
 
   /// Call background service
-  Future<bool?> callBackgroundService(void Function(String s) callback);
+  Future<bool?> callBackgroundService(dynamic args);
 }

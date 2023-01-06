@@ -19,14 +19,12 @@ class WalletConnectIOS extends WalletConnectPlatform {
   }
 
   @override
-  Future<bool?> callBackgroundService(void Function(String s) callback) {
-    // TODO: implement callBackgroundService
-    throw UnimplementedError();
+  Future<bool?> initializeForBackground(dynamic args) async {
+    return methodChannel.invokeMethod('initializeForBackground', args);
   }
 
   @override
-  Future<bool?> initializeForBackground() {
-    // TODO: implement initializeForBackground
-    throw UnimplementedError();
+  Future<bool?> callBackgroundService(dynamic args) async {
+    return methodChannel.invokeMethod('callBackgroundService', args);
   }
 }
