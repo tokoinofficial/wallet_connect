@@ -12,14 +12,19 @@ Future<String> getPlatformName() async {
   return platformName;
 }
 
-/// Initialize for background call
-Future<void> initializeForBackground() async {
-  final callback = PluginUtilities.getCallbackHandle(callbackDispatcher);
-  await _platform.initializeForBackground(<dynamic>[callback?.toRawHandle()]);
-}
+class WalletConnect {
+  /// Initialize for background call
+  static Future<void> initializeForBackground() async {
+    final callback = PluginUtilities.getCallbackHandle(callbackDispatcher);
+    await _platform.initializeForBackground(<dynamic>[callback?.toRawHandle()]);
+  }
 
-/// Call background service
-Future<void> callBackgroundService(void Function(String s) callback) async {
-  final args = <dynamic>[PluginUtilities.getCallbackHandle(callback)?.toRawHandle()];
-  await _platform.callBackgroundService(args);
+  /// Call background service
+  static Future<void> callBackgroundService(
+      void Function(String s) callback) async {
+    final args = <dynamic>[
+      PluginUtilities.getCallbackHandle(callback)?.toRawHandle()
+    ];
+    await _platform.callBackgroundService(args);
+  }
 }

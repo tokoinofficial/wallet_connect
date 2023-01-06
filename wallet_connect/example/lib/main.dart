@@ -25,12 +25,12 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     super.initState();
-    initializeForBackground();
+    WalletConnect.initializeForBackground();
   }
 
-  static void callback(String s) async {
-    print("I am from main.dart");
-    print(s);
+  static Future<void> callback(String s) async {
+    debugPrint('I am from main.dart');
+    debugPrint(s);
   }
 
   @override
@@ -68,9 +68,7 @@ class _HomePageState extends State<HomePage> {
             ElevatedButton(
               onPressed: () async {
                 try {
-                  await callBackgroundService((s) {
-                    callback('test wallet connect');
-                  });
+                  await WalletConnect.callBackgroundService(callback);
                 } catch (error) {
                   ScaffoldMessenger.of(context).showSnackBar(
                     SnackBar(
