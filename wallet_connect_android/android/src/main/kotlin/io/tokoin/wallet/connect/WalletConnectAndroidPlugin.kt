@@ -29,15 +29,15 @@ class WalletConnectAndroidPlugin : FlutterPlugin, MethodCallHandler {
     if (call.method.equals("getPlatformName")) {
       result.success("Android")
     } else if (call.method.equals("initializeForBackground")) {
-      val args: ArrayList = call.arguments()
-      val callBackHandle = args.get(0) as Long
+      val args = call.arguments() as ArrayList<*>?
+      val callBackHandle = args?.get(0) as Long
       mCallbackDispatcherHandle = callBackHandle
       result.success(null)
       return
     } else if (call.method.equals("callBackgroundService")) {
-      val args: ArrayList = call.arguments()
-      val callbackHandle = args.get(0) as Long
-      val i = Intent(mContext, io.tokoin.wallet.connect.MyService::class)
+      val args = call.arguments() as ArrayList<*>?
+      val callbackHandle = args?.get(0) as Long
+      val i = Intent(mContext, io.tokoin.wallet.connect.MyService::class.java)
       i.putExtra(CALLBACK_HANDLE_KEY, callbackHandle)
       i.putExtra(CALLBACK_DISPATCHER_HANDLE_KEY, mCallbackDispatcherHandle)
       mContext?.startService(i)

@@ -27,7 +27,7 @@ class MyService : Service() {
         backgroundFlutterView.runFromBundle(flutterRunArguments)
         val mBackgroundChannel = MethodChannel(backgroundFlutterView, "background_channel")
         val callbackHandle: Long = intent.getLongExtra(CALLBACK_HANDLE_KEY, 0)
-        val l: ArrayList<Object> = ArrayList<Object>()
+        val l: ArrayList<Any> = ArrayList<Any>()
         l.add(callbackHandle)
         l.add("Hello, I am transferred from java to dart world")
         mBackgroundChannel.invokeMethod("", l)
