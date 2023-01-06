@@ -8,14 +8,14 @@ class WalletConnectMock extends WalletConnectPlatform {
   Future<String?> getPlatformName() async => mockPlatformName;
 
   @override
-  Future<bool?> callBackgroundService(void Function(String s) callback) {
-    // TODO: implement callBackgroundService
+  Future<bool?> initializeForBackground(dynamic args) {
+    // TODO: implement initializeForBackground
     throw UnimplementedError();
   }
 
   @override
-  Future<bool?> initializeForBackground() {
-    // TODO: implement initializeForBackground
+  Future<bool?> callBackgroundService(dynamic args) {
+    // TODO: implement callBackgroundService
     throw UnimplementedError();
   }
 }

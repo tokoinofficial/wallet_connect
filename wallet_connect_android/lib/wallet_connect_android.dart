@@ -1,8 +1,5 @@
-import 'dart:ui';
-
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
-import 'package:wallet_connect_android/callback_dispatcher.dart';
 import 'package:wallet_connect_platform_interface/wallet_connect_platform_interface.dart';
 
 /// The Android implementation of [WalletConnectPlatform].
@@ -22,18 +19,12 @@ class WalletConnectAndroid extends WalletConnectPlatform {
   }
 
   @override
-  Future<bool?> initializeForBackground() async {
-    final CallbackHandle? callback =
-        PluginUtilities.getCallbackHandle(callbackDispatcher);
-    return await methodChannel
-        .invokeMethod('initializeForBackground', [callback?.toRawHandle()]);
+  Future<bool?> initializeForBackground(dynamic args) async {
+    return methodChannel.invokeMethod('initializeForBackground', args);
   }
 
   @override
-  Future<bool?> callBackgroundService(void Function(String s) callback) async {
-    final List<dynamic> args = <dynamic>[
-      PluginUtilities.getCallbackHandle(callback)?.toRawHandle()
-    ];
-    return await methodChannel.invokeMethod('callBackgroundService', args);
+  Future<bool?> callBackgroundService(dynamic args) async {
+    return methodChannel.invokeMethod('callBackgroundService', args);
   }
 }
