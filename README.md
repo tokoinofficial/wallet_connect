@@ -7,6 +7,7 @@ TODO: List what your package can do. Maybe include images, gifs, or videos.
 ## Getting started
 
 Follow Federated plugins structure https://docs.flutter.dev/development/packages-and-plugins/developing-packages#federated-plugins
+
 Using Very Good Venture CLI to generate https://github.com/VeryGoodOpenSource/very_good_flutter_plugin
 
 ## Usage
