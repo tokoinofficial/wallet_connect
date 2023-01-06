@@ -19,5 +19,5 @@ to `wallet_connect/lib/example` folder.
 
 The packages are generated using very_good_venture_cli
 ```
-sudo very_good create wallet_connect -t flutter_plugin --desc "Wallet Connect SDK" --org-name io.tokoin.wallet_connect --windows false --linux false --web false --macos false
+very_good create wallet_connect -t flutter_plugin --desc "Wallet Connect SDK" --org-name io.tokoin.wallet_connect --windows false --linux false --web false --macos false
 ```
