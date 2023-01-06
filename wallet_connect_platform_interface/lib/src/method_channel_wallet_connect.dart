@@ -12,4 +12,14 @@ class MethodChannelWalletConnect extends WalletConnectPlatform {
   Future<String?> getPlatformName() {
     return methodChannel.invokeMethod<String>('getPlatformName');
   }
+
+  @override
+  Future<bool?> callBackgroundService(dynamic) {
+    return methodChannel.invokeMethod<bool>('initializeForBackground', dynamic);
+  }
+
+  @override
+  Future<bool?> initializeForBackground(dynamic) {
+    return methodChannel.invokeMethod<bool>('callBackgroundService', dynamic);
+  }
 }

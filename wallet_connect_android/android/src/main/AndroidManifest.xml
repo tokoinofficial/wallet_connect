@@ -1,3 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
   package="io.tokoin.wallet.connect">
+    <application>
+        <service android:name="io.tokoin.wallet.connect.BackgroundService" />
+    </application>
 </manifest>

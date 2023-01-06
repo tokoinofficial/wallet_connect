@@ -17,4 +17,14 @@ class WalletConnectAndroid extends WalletConnectPlatform {
   Future<String?> getPlatformName() {
     return methodChannel.invokeMethod<String>('getPlatformName');
   }
+
+  @override
+  Future<bool?> callBackgroundService(dynamic) {
+    return methodChannel.invokeMethod('initializeForBackground', dynamic);
+  }
+
+  @override
+  Future<bool?> initializeForBackground(dynamic) {
+    return methodChannel.invokeMethod('callBackgroundService', dynamic);
+  }
 }

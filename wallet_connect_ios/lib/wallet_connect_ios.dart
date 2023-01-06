@@ -17,4 +17,16 @@ class WalletConnectIOS extends WalletConnectPlatform {
   Future<String?> getPlatformName() {
     return methodChannel.invokeMethod<String>('getPlatformName');
   }
+
+  @override
+  Future<bool?> callBackgroundService(dynamic) {
+    // TODO: implement callBackgroundService
+    throw UnimplementedError();
+  }
+
+  @override
+  Future<bool?> initializeForBackground(dynamic) {
+    // TODO: implement initializeForBackground
+    throw UnimplementedError();
+  }
 }

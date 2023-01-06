@@ -23,6 +23,17 @@ class _HomePageState extends State<HomePage> {
   String? _platformName;
 
   @override
+  void initState() {
+    super.initState();
+    initializeForBackground();
+  }
+
+  static void callback(String s) async {
+    print("I am from main.dart");
+    print(s);
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('WalletConnect Example')),
@@ -53,6 +64,23 @@ class _HomePageState extends State<HomePage> {
                 }
               },
               child: const Text('Get Platform Name'),
+            ),
+            ElevatedButton(
+              onPressed: () async {
+                try {
+                  await callBackgroundService((s) {
+                    callback('test wallet connect');
+                  });
+                } catch (error) {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(
+                      backgroundColor: Theme.of(context).primaryColor,
+                      content: Text('$error'),
+                    ),
+                  );
+                }
+              },
+              child: const Text('Call Background Service'),
             ),
           ],
         ),
