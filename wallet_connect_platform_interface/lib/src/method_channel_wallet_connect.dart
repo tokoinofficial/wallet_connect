@@ -22,4 +22,9 @@ class MethodChannelWalletConnect extends WalletConnectPlatform {
   Future<bool?> callBackgroundService(dynamic args) {
     return methodChannel.invokeMethod<bool>('initializeForBackground', args);
   }
+
+  @override
+  Future<bool?> signInitialize() {
+    return methodChannel.invokeMethod<bool>('signInitialize');
+  }
 }

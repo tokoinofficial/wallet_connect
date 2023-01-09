@@ -27,4 +27,9 @@ class WalletConnectAndroid extends WalletConnectPlatform {
   Future<bool?> callBackgroundService(dynamic args) async {
     return methodChannel.invokeMethod('callBackgroundService', args);
   }
+
+  @override
+  Future<bool?> signInitialize() {
+    return methodChannel.invokeMethod('signInitialize');
+  }
 }

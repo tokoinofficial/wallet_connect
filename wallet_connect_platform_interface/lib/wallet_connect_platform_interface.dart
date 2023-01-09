@@ -36,4 +36,7 @@ abstract class WalletConnectPlatform extends PlatformInterface {
 
   /// Call background service
   Future<bool?> callBackgroundService(dynamic args);
+
+  /// Sign initialize
+  Future<bool?> signInitialize();
 }

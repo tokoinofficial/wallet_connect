@@ -80,6 +80,21 @@ class _HomePageState extends State<HomePage> {
               },
               child: const Text('Call Background Service'),
             ),
+            ElevatedButton(
+              onPressed: () async {
+                try {
+                  await WalletConnect.signInitialize();
+                } catch (error) {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(
+                      backgroundColor: Theme.of(context).primaryColor,
+                      content: Text('$error'),
+                    ),
+                  );
+                }
+              },
+              child: const Text('signInitialize'),
+            ),
           ],
         ),
       ),
