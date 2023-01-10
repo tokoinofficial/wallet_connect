@@ -47,8 +47,8 @@ android {
         jvmTarget = "11"
     }
 
-    sourceSets.getByName("test") {
-        java.srcDir("src/test/kotlin")
+    sourceSets.getByName("main") {
+        java.srcDir("src/main/kotlin")
     }
 
 }
