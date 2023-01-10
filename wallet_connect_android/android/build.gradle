@@ -2,15 +2,31 @@ group 'io.tokoin.wallet.connect'
 version '1.0-SNAPSHOT'
 
 buildscript {
-    ext.kotlin_version = '1.6.10'
+    ext.kotlin_version = '1.7.20'
+    ext.dokkaVersion = '1.6.21'
+    ext.sqlDelightVersion = '1.5.2'
     repositories {
         google()
+        mavenLocal()
         mavenCentral()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+        maven {
+            url "https://jitpack.io"
+        }
+        maven {
+            url "https://s01.oss.sonatype.org/content/repositories/snapshots/"
+        }
+        jcenter() // Warning: this repository is going to shut down
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.1.2'
+        classpath 'com.android.tools.build:gradle:7.3.1'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.jetbrains.dokka:dokka-core:$dokkaVersion"
+        classpath "org.jetbrains.dokka:dokka-gradle-plugin:$dokkaVersion"
+        classpath "com.squareup.sqldelight:gradle-plugin:$sqlDelightVersion"
     }
 }
 
@@ -18,22 +34,31 @@ allprojects {
     repositories {
         google()
         mavenCentral()
+        mavenLocal()
+        maven {
+            url "https://jitpack.io"
+        }
+        maven {
+            url "https://s01.oss.sonatype.org/content/repositories/snapshots/"
+        }
+        jcenter() // Warning: this repository is going to shut down
     }
 }
 
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
+apply plugin: 'org.jetbrains.kotlin.android'
 
 android {
     compileSdkVersion 31
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
     }
 
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = '11'
     }
 
     sourceSets {
@@ -41,7 +66,7 @@ android {
     }
 
     defaultConfig {
-        minSdkVersion 16
+        minSdkVersion 23
     }
 }
 
@@ -50,3 +75,4 @@ dependencies {
     implementation("com.walletconnect:android-core")
     implementation("com.walletconnect:sign")
 }
+
