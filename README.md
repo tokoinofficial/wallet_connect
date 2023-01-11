@@ -12,7 +12,27 @@ Using Very Good Venture CLI to generate https://github.com/VeryGoodOpenSource/ve
 
 ## Usage
 
-Run example app in
+1. Add 3 params to `wallet_connect/example/android/local.properties`  
+
+```
+flutter.minSdkVersion=23
+flutter.targetSdkVersion=31
+flutter.compileSdkVersion=31
+```
+
+Ref: https://stackoverflow.com/a/70316521/578309
+
+2. At wallet_connect folder, run following commands:
+
+```
+
+flutter clean 
+
+flutter pub get
+
+```
+
+3. Run example app in
 to `wallet_connect/lib/example` folder.
 
 ## Additional information

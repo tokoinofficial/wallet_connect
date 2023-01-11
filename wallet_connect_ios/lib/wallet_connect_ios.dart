@@ -27,4 +27,10 @@ class WalletConnectIOS extends WalletConnectPlatform {
   Future<bool?> callBackgroundService(dynamic args) async {
     return methodChannel.invokeMethod('callBackgroundService', args);
   }
+
+  @override
+  Future<bool?> signInitialize() {
+    // TODO: implement signInitialize
+    throw UnimplementedError();
+  }
 }

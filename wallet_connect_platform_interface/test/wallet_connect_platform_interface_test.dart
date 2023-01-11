@@ -18,6 +18,12 @@ class WalletConnectMock extends WalletConnectPlatform {
     // TODO: implement callBackgroundService
     throw UnimplementedError();
   }
+
+  @override
+  Future<bool?> signInitialize() {
+    // TODO: implement signInitialize
+    throw UnimplementedError();
+  }
 }
 
 void main() {

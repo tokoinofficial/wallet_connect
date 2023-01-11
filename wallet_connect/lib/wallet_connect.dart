@@ -30,4 +30,9 @@ class WalletConnect {
     ];
     await _platform.callBackgroundService(args);
   }
+
+  /// Initialize for sign
+  static Future<void> signInitialize() async {
+    await _platform.signInitialize();
+  }
 }
